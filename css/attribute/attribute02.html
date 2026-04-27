@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+    
+    
+    
+    
+    
+    <style>
+        .font-attr1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 40px;
+            font-variant: small-caps;
+            color:darkblue;
+            letter-spacing: 10px;     /*    자간    */
+            line-height: 50px;        /*    행간    */
+            /* 
+                normal : 일반
+                small-caps : 소문자를 대문자 크기로 변환
+            */
+        }
+
+        .font-attr2 {
+            font-weight: bold;
+            font-style: oblique;
+            /* 
+                italic  : 이탤릭체
+                oblique : 기울임 
+            */
+        }
+
+
+        .font-box {
+            text-align: center;
+
+            font-size: 24px;
+        }
+
+
+        .dongle-regular {
+        font-family: "Dongle", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+}
+
+        .east-sea-dokdo-regular {
+        font-family: "East Sea Dokdo", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size:50px;
+        }
+
+        .inbox1{
+            font-size: 2em;
+        }
+
+        .inbox2{
+            font-size: 2rem;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <p>기본 텍스트 Font attr1</p>
+
+    <p class="font-attr1">font attr1</p>
+    <p class="font-attr2">font attr2 글씨속성</p>
+
+    <i>Font attribute</i>
+
+    <div class="font-box">
+        <p class="dongle-regular">font box 글자 1111</p>
+        <p class="inbox1">font box 글자 2222</p>
+        <p class="inbox2">font box 글자 3333</p>
+    </div>
+
+    <div class="font-box2">
+        <p class="dongle-regular">font box 글자 1111</p>
+        <p class="inbox1">font box 글자 2222</p>
+        <p class="inbox2">font box 글자 3333</p>
+    </div>
+
+    <p>
+        오늘의 특가 
+        <del>5,000원</del>
+        <ins>3,000원</ins>
+    </p>
+    <p>
+        오늘의 특가 
+        <span style="text-decoration: line-through">5,000원</span>
+        <span style="text-decoration: underline">3,000원</span>
+    </p>
+
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        .box{
+            width:100px;
+            height:100px;
+            border:1px solid black;
+            margin:5px;
+            background-color:blue;
+            
+            /* animation-play-state: running; */
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-name: box1;
+            /* animation-fill-mode: both; */
+            transition-duration: 3s;
+            animation-direction: alternate;
+            transform-origin: center;
+        }
+
+        @keyframes box1 {
+            0%
+            {
+                transform:translateX(0px) rotate(0deg);
+                background-color: blue;
+            
+            }
+            50%
+            {
+                transform:translateX(200px) rotate(360deg);
+                background-color: yellow;
+
+            }
+            100%
+            {
+                transform:translateX(400px) rotate(720deg);
+                background-color: pink;
+            }
+        }
+
+    </style>
+<body>
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+        }
+        .close-btn{
+            cursor:pointer;
+            position: absolute;
+            right:20px;
+            top:20px;
+            margin:0px;
+            font-weight:bold;
+            color:lightgray;
+
+        }
+
+        .container{
+            width:400px;
+            /* border:1px solid black; */
+            position:relative;
+            padding: 40px;
+
+        }
+        p2{
+            font-weight:bold;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .login-main{
+            display:flex;
+            border-bottom: 1px solid white;
+            margin-bottom: 25px;
+            margin-top:20px;
+        
+        }
+
+        .login{
+            padding: 10px 20px;
+            cursor: pointer;
+            color: lightgray;
+        }
+        .login2{
+            color: lightblue;
+            border-bottom: 2px solid lightblue;
+            font-weight: bold;
+            padding: 10px 20px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid lightgray;
+            box-sizing: border-box;
+            font-size: 14px;
+            border-radius: 4px;
+            
+        }
+        .input-group{
+            margin-bottom:15px;
+
+        }
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: black;
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            color: #666;
+            margin-top: 20px;
+        }
+
+        .checkbox-group input {
+            margin-right: 8px;
+        }
+        .signup-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: rgb(12, 139, 189);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .sns {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: rgb(66, 154, 184);
+            text-decoration: none;
+        }
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="close-btn">X</span>
+        <p2>지금 가입하시면<br>웰컴쿠폰을 드려요!</p2>
+
+    <div class="login-main">
+        <div class="login">로그인</div>
+        <div class="login2">회원가입</div>
+    </div>
+
+    <div class="input-group">
+        <label>이메일</label>
+        <input type="email" placeholder="이메일을 입력해주세요.">
+    </div>
+
+    <div class="input-group">
+        <label>이름 / 업체명</label>
+        <input type="text" placeholder="2자 이상 20자 이하">
+    </div>
+
+    <div class="input-group">
+        <label>비밀번호</label>
+        <input type="password" placeholder="영문 숫자 특수문자 조합 8-16자리">
+    </div>
+
+    <div class="input-group">
+        <label>비밀번호 확인</label>
+        <input type="password" placeholder="비밀번호를 다시 입력해주세요.">
+    </div>
+
+    <div class="checkbox-group">
+        <input type="checkbox" id="terms">
+        <label for="terms">개인정보수집이용안내 및 약관에 동의 합니다</label>
+    </div>
+    <button class="signup-btn">회원 가입하기</button>
+    
+    <a href="#" class="sns">SNS로 간편하게 가입하기</a>
+    </div>
+</body>
+</html>

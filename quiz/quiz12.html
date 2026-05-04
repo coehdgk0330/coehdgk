@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+        }
+        .container{
+            height:500px;
+            width:700px;
+            border:2px solid black;
+            margin:0 auto;
+            margin-top: 50px;
+            
+        }
+        .main{
+            display:flex;
+            line-height: 100px;
+        }
+        .main-1{
+            width:200px;
+            height:100px;
+            background-color:red;
+            color:white;
+            text-align: center;
+        }
+        
+        .main-3{
+            width:100px;
+            height:100px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            margin-left: auto;
+            
+        }
+        .side{
+            display:flex;
+            line-height: 300px;
+
+        }
+        .side-1{
+            width:490px;
+            height:300px;
+            background-color: orange;
+            display:flex;
+            align-items: center;
+            justify-content:center;
+            flex-direction:column;
+        }
+        .side-2{
+            width:210px;
+            height:300px;
+            background-color: green;
+            color:white;
+            text-align: center;
+        }
+        .footer{
+            width:100%;
+            height:100px;
+            background-color: blue;
+            color:white;
+            text-align: center;
+            line-height: 100px;
+        }
+        .box{
+            height:50px;
+            width:100px;
+            background-color: black;
+            margin:30px;
+            z-index:2;
+            transition-duration: 1s;
+        }
+        .box1{
+            display:flex;
+        }
+        .box2{
+            
+            display:flex;
+            
+        }
+        .box:hover{
+            transform:scale(1.4);
+            transition-property: all;
+            transition-timing-function: linear;
+            
+            
+        }
+    </style>    
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="main-1">메인메뉴</div>
+            
+            <div class="main-3">마이페이지</div>
+        </div>
+        <div class="side">
+            <div class="side-1">
+                <div class="box1">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>  
+                <div class="box2">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div> 
+            </div>
+            <div class="side-2">aside</div>
+        </div>
+        <div class="footer">footer</div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+</body>
+</html>

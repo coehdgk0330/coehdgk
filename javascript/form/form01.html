@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>form01</h1>
+
+    <form id="form_id" action="" method="">
+        <label>아이디 : <input type="text" id= "input_id" placeholder="아이디를 입력하세요."> </label>
+        <br><br>
+        <label>비번 : <input type="password" id= "input_pw"> </label>
+
+        <button type="submit" id=btn_submit>로그인버튼(submit)</button>
+        <button type="button" id="btn_normal">그냥버튼(submit)</button>
+
+        <br><br>
+        <button type="button" id="btn_extra">extra버튼</button>
+
+    </form>
+    <script>
+
+
+        const input_id  = document.getElementById('input_id');
+        const input_pw  = document.getElementById('input_pw');
+
+        const btn_submit  = document.getElementById('btn_submit');
+        const btn_normal  = document.getElementById('btn_normal');
+
+        const btn_extra  = document.getElementById('btn_extra');
+        
+
+        btn_normal.addEventListener('click', ()=>{
+        console.log(input_id.value);
+        console.log(input_pw.value);
+
+        input_id.value = 'valuevalue';
+    })
+
+    input_id.addEventListener('focus', ()=>{
+        console.log('input_id 요소에 focus 잡힘');
+    })
+
+    input_pw.addEventListener('focus', ()=>{
+        console.log('input_pw 요소에 focus 잡힘');
+    })
+    btn_extra.addEventListener('click', ()=>{
+        btn_normal.click();
+        input_pw.focus();
+    })
+    input_id.addEventListener('keydown', (event)=>{
+        console.log(event.key);
+        console.log(input_id.value);
+
+        if(event.key == 'Enter'){
+            event.preventDefault();
+            input_pw.focus();
+        }
+    })
+
+    // input_pw.addEventListener('submit'. ()=>{})
+    //submit 이벤트 발생 주체 -> form
+    document.getElementById('form_id').addEventListener('submit', (event)=>{
+
+        console.log("폼 submit 이 발생함")
+        event.preventDefault();
+
+        // submit 이벤트 : form이 주체 ->
+        //               form 내부 데이터 정리(검증 , 수집)-> 다른페이지or서버경로 전송(페이지이동)
+        //                      action 페이지 정보없으면, 현재경로 (페이지 새로고침)
+        // form action = "속성값" 요청하는 경로
+        //                 ""-> 현재경로
+
+
+        //submit 멈춤
+        //검증 -> 입력?제한? -> 통과되면 submit 진행
+        if(input_id.value.trim() == ''){
+            alert('아이디 필수입력입니다.');
+            input_id.focus();
+            input_id.value = input_id.value.trim();
+            return;
+        }
+
+        //제한 비밀번호를 8자리 이상 입력
+        if(input_pw.value.trim()==''){
+            alert('비밀번호를 입력하세요');
+            input_pw.focus();
+            return;
+        }
+
+        if(input_pw.value.trim().length <8){
+            alert('비밀번호 8자리 이상 입력하세요')//회원가입쪽에서 제한하는것
+            return;
+        }
+
+
+        document.getElementById('form_id').submit(); //submit() 발생
+
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+<style>
+/* 필요시 작성 */
+    .main{
+        background-color: gray;
+    }
+    .p1{
+        color:red;
+    }
+    .main2{
+        background-color: white;
+    }
+
+</style>
+</head>
+<body>
+<div class="container">
+<div id="main">
+<p id="p1">p1 텍스트</p>
+<p id="p2">p2 텍스트</p>
+</div>
+</div>
+<button onclick="changeMain()">main 배경색 gray로 변경</button>
+<button onclick="changeP1()">p1 글자색 red로 변경</button>
+<button onclick="changeP2()">"p2 텍스트"를 "p2 글자" 로 변경</button>
+<button onclick="changeMain2()">main 배경색을 white 로 다시 변경하기</button>
+<button onclick="changeP11()">p1 글자색 다시 black 로 다시 변경하기</button>
+
+
+
+
+<script>
+
+        function changeMain(){
+            // main.classList.add('main');
+            // main.classList.remove('main2');
+            main.classList.toggle('main');
+            main.classList.remove('main2');
+        }
+        function changeP1(){
+            // p1.classList.add('p1');
+            p1.classList.toggle('p1');
+        }
+        function changeP2(){
+           // document.querySelector('#p2').textContent="p2 글자" ;
+    
+
+        }
+        function changeMain2(){
+            main.classList.remove('main');
+            main.classList.add('main2');
+        }
+        function changeP11(){
+            p1.classList.remove('p1');
+        }
+
+        const textList = ["p2 텍스트","p2 하나","p2 둘","p2 셋","p2 넷"];
+        let index=0;
+
+        function changeP2(){
+            index++;
+        
+        if (index >= textList.length){
+            index=0;
+        }
+        p2.textContent=textList[index];
+        
+    }
+</script>
+</body>
+</html>
